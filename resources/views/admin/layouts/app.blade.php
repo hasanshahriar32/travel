@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta> name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Laravel Shop :: Administrative Panel</title>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -73,7 +73,7 @@
         <!-- /.content-wrapper -->
         <footer class="main-footer">
 
-            <strong>Copyright &copy; 2014-2022 AmazingShop All rights reserved.
+            <strong>Copyright &copy; 2022-2023 Travel agency All rights reserved.
         </footer>
 
     </div>

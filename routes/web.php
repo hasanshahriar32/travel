@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin.login');
+//Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin.login');
+//Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.guest'], function () {
@@ -33,7 +34,7 @@ route::group(['prefix' => 'admin'], function () {
         Route::post('/catagories', [CatagoryController::class, 'store'])->name('catagory.store');
 
 
-        
+
     });
     Route::group(['middleware' => 'admin.auth'], function () {
         //Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
