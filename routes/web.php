@@ -3,6 +3,7 @@
 use App\Http\Controllers\admin\AdminLoginController;
 use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\pagecontroller;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
@@ -17,9 +18,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[pagecontroller::class,'index'])->name('index');
+Route::get('/about',[pagecontroller::class,'about'])->name('about');
+Route::get('/contact',[pagecontroller::class,'contact'])->name('contact');
+Route::get('/destination_details',[pagecontroller::class,'destination_details'])->name('destination_details');
+Route::get('/travel_destination',[pagecontroller::class,'travel_destination'])->name('travel_destination');
+
+
+
+
+
 //Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin.login');
 //Route::get('/home', [HomeController::class, 'home'])->name('home');
 
