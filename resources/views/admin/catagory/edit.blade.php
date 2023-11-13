@@ -18,7 +18,7 @@
     <section class="content">
         <!-- Default box -->
         <div class="container-fluid">
-            <form action="{{ route('category.store') }}" method="POST" name="categoryForm" id="categoryForm">
+            <form action="{{ route('catagory.update',$catagory->id) }}" method="POST" name="categoryForm" id="categoryForm">
                 @csrf
                 @method('POST')
 
@@ -29,7 +29,7 @@
                                 <div class="mb-3">
                                     <label for="name">Name</label>
                                     <input type="text" name="name" id="name" class="form-control"
-                                        placeholder="Name">
+                                        value="{{ $catagory->name }}">
                                     @error('name')
                                         <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
@@ -39,15 +39,16 @@
                                 <div class="mb-3">
                                     <label for="slug">Slug</label>
                                     <input type="text" name="slug" id="slug" class="form-control"
-                                        placeholder="Slug">
+                                        value="{{ $catagory->slug }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="status">Status</label>
                                     <select name="status" id="status" class="form-control">
-                                        <option value="1">Active</option>
-                                        <option value="0">Block</option>
+                                        <option value="1" {{ $catagory->status == 1 ? 'selected' : '' }}>Active
+                                        </option>
+                                        <option value="0" {{ $catagory->status == 0 ? 'selected' : '' }}>Block</option>
                                     </select>
                                 </div>
                             </div>
