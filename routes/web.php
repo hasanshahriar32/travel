@@ -3,8 +3,10 @@
 use App\Http\Controllers\admin\AdminLoginController;
 use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\HomeController;
-use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\frontend\IndexController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,14 +22,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-//Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin.login');
-//Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/signup', function () {
+    return view('signup');
+});
+
+Route::get('/', [IndexController::class, 'index']);
 
 route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.guest'], function () {
         Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login');
         Route::post('/authinticate', [AdminLoginController::class, 'authenticate'])->name('admin.authenticate');
-        Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+        //Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
 
         //catagories
         Route::get('/catagory/create', [CatagoryController::class, 'create'])->name('catagory.create');
