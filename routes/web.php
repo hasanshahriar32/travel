@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\AdminLoginController;
 use App\Http\Controllers\CatagoryController;
+use App\Http\Controllers\destinationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\pagecontroller;
 use GuzzleHttp\Middleware;
@@ -18,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[pagecontroller::class,'index'])->name('index');
-Route::get('/about',[pagecontroller::class,'about'])->name('about');
-Route::get('/contact',[pagecontroller::class,'contact'])->name('contact');
-Route::get('/destination_details',[pagecontroller::class,'destination_details'])->name('destination_details');
-Route::get('/travel_destination',[pagecontroller::class,'travel_destination'])->name('travel_destination');
+Route::get('/', [pagecontroller::class, 'index'])->name('index');
+Route::get('/about', [pagecontroller::class, 'about'])->name('about');
+Route::get('/contact', [pagecontroller::class, 'contact'])->name('contact');
+Route::get('/destination_details', [pagecontroller::class, 'destination_details'])->name('destination_details');
+Route::get('/travel_destination', [pagecontroller::class, 'travel_destination'])->name('travel_destination');
 
 
 
@@ -44,6 +45,16 @@ route::group(['prefix' => 'admin'], function () {
         Route::get('/catagory/edit/{id}', [CatagoryController::class, 'edit'])->name('catagory.edit');
         Route::post('/catagory/{id}', [CatagoryController::class, 'update'])->name('catagory.update');
         Route::post('/catagory/delete/{id}', [CatagoryController::class, 'destroy'])->name('catagory.delete');
+
+
+        //destination
+        Route::get('/destination/create', [destinationController::class, 'create'])->name('destination.create');
+        Route::get('/destination', [DestinationController::class, 'index'])->name('destination.index');
+        Route::post('/destination', [DestinationController::class, 'store'])->name('destination.store');
+        Route::get('/destination/edit/{id}', [DestinationController::class, 'edit'])->name('destination.edit');
+        Route::post('/destination/update/{id}', [DestinationController::class, 'update'])->name('destination.update');
+        Route::post('/destination/delete/{id}', [DestinationController::class, 'destroy'])->name('destination.delete');
+
 
 
 

@@ -7,27 +7,27 @@
     <title>Travelo</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <script src="https://kit.fontawesome.com/5b234f7ad3.js" crossorigin="anonymous"></script>
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('page-assets/img/favicon.png')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('page-assets/img/favicon.png') }}" />
     <!-- Place favicon.ico in the root directory -->
 
     {{-- <!-- CSS here -->{{asset('page-assets/')}} --}}
-    <link rel="stylesheet" href="{{asset('page-assets/css/bootstrap.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/owl.carousel.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/magnific-popup.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/font-awesome.min.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/themify-icons.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/nice-select.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/flaticon.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/gijgo.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/animate.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/slick.css')}}" />
-    <link rel="stylesheet" href="{{asset('page-assets/css/slicknav.css')}}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/magnific-popup.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/themify-icons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/nice-select.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/flaticon.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/gijgo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/animate.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/slick.css') }}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/slicknav.css') }}" />
     <link rel="stylesheet"
         href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 
-    <link rel="stylesheet" href="{{asset('page-assets/css/style.css')}}" />
+    <link rel="stylesheet" href="{{ asset('page-assets/css/style.css') }}" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -50,7 +50,7 @@
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="{{asset('page-assets/img/logo.png')}}" alt="" />
+                                        <img src="{{ asset('page-assets/img/logo.png') }}" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -59,16 +59,16 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li>
-                                                <a class="active" href="index.html">home</a>
+                                                <a class="active" href="{{ route('index') }}">home</a>
                                             </li>
                                             <li>
-                                                <a href="about.html">About</a>
+                                                <a href="{{ route('about') }}">About</a>
                                             </li>
                                             <li>
-                                                <a href="travel_destination.html">Destination</a>
+                                                <a href="{{ route('travel_destination') }}">Destination</a>
                                             </li>
                                             <li>
-                                                <a href="contact.html">Contact</a>
+                                                <a href="{{ route('contact') }}">Contact</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -129,7 +129,7 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="{{asset('page-assets/img/footer_logo.png')}}" alt="" />
+                                    <img src="{{ asset('page-assets/img/footer_logo.png') }}" alt="" />
                                 </a>
                             </div>
                             <p>
@@ -191,32 +191,32 @@
                             <div class="instagram_feed">
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="{{asset('page-assets/img/instagram/1.png')}}" alt="" />
+                                        <img src="{{ asset('page-assets/img/instagram/1.png') }}" alt="" />
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="{{asset('page-assets/img/instagram/2.png')}}" alt="" />
+                                        <img src="{{ asset('page-assets/img/instagram/2.png') }}" alt="" />
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="{{asset('page-assets/img/instagram/3.png')}}" alt="" />
+                                        <img src="{{ asset('page-assets/img/instagram/3.png') }}" alt="" />
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="{{asset('page-assets/img/instagram/4.png')}}" alt="" />
+                                        <img src="{{ asset('page-assets/img/instagram/4.png') }}" alt="" />
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="{{asset('page-assets/img/instagram/5.png')}}" alt="" />
+                                        <img src="{{ asset('page-assets/img/instagram/5.png') }}" alt="" />
                                     </a>
                                 </div>
                                 <div class="single_insta">
                                     <a href="#">
-                                        <img src="{{asset('page-assets/img/instagram/6.png')}}" alt="" />
+                                        <img src="{{ asset('page-assets/img/instagram/6.png') }}" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -269,34 +269,34 @@
 
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
     <!-- JS here -->
-    <script src="{{asset('page-assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/popper.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/ajax-form.js')}}"></script>
-    <script src="{{asset('page-assets/js/waypoints.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/imagesloaded.pkgd.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/scrollIt.js')}}"></script>
-    <script src="{{asset('page-assets/js/jquery.scrollUp.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/wow.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/nice-select.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/jquery.slicknav.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/plugins.js')}}"></script>
-    <script src="{{asset('page-assets/js/gijgo.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/slick.min.js')}}"></script>
+    <script src="{{ asset('page-assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/vendor/jquery-1.12.4.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/ajax-form.js') }}"></script>
+    <script src="{{ asset('page-assets/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/scrollIt.js') }}"></script>
+    <script src="{{ asset('page-assets/js/jquery.scrollUp.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/nice-select.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/jquery.slicknav.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/plugins.js') }}"></script>
+    <script src="{{ asset('page-assets/js/gijgo.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/slick.min.js') }}"></script>
 
     <!--contact js-->
-    <script src="{{asset('page-assets/js/contact.js')}}"></script>
-    <script src="{{asset('page-assets/js/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/jquery.form.js')}}"></script>
-    <script src="{{asset('page-assets/js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('page-assets/js/mail-script.js')}}"></script>
+    <script src="{{ asset('page-assets/js/contact.js') }}"></script>
+    <script src="{{ asset('page-assets/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/jquery.form.js') }}"></script>
+    <script src="{{ asset('page-assets/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('page-assets/js/mail-script.js') }}"></script>
 
-    <script src="{{asset('page-assets/js/main.js')}}"></script>
+    <script src="{{ asset('page-assets/js/main.js') }}"></script>
     <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',

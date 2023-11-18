@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\destination;
 use Illuminate\Http\Request;
 
 class pagecontroller extends Controller
@@ -22,8 +23,10 @@ class pagecontroller extends Controller
     {
         return view('pages.destination_details');
     }
-    public function travel_destination()
+    public function travel_destination(Request $request)
     {
-        return view('pages.travel_destination');
+        $destinations = destination::latest()->get();
+        //dd($destinations[0]);
+        return view('pages.travel_destination', compact('destinations'));
     }
 }

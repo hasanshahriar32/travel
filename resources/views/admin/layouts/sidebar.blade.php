@@ -32,6 +32,12 @@
                         <p>Sub Category</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('destination.index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Destination</p>
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
                             <a href="brands.html" class="nav-link">
                                 <svg class="h-6 nav-icon w-6 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none"

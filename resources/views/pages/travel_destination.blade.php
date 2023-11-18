@@ -14,30 +14,37 @@
         </div>
     </div>
     <!--/ bradcam_area  -->
-{{-- <!-- CSS here -->{{asset('page-assets/')}} --}}
+    {{-- <!-- CSS here -->{{asset('page-assets/')}} --}}
     <div class="popular_places_area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4">
-                            <div class="single_place">
-                                <div class="thumb">
-                                    <img src="{{asset('page-assets/img/place/1.png')}}" alt="">
-                                    <a href="#" class="prise">$500</a>
-                                </div>
-                                <div class="place_info">
-                                    <a href="destination_details.html"><h3>California</h3></a>
-                                    <p>United State of America</p>
-                                    <div class="rating_days d-flex justify-content-between">
-                                        <div class="days">
-                                            <i class="fa fa-clock-o"></i>
-                                            <a href="#">4N3D</a>
+                        @foreach ($destinations as $destination)
+
+                            <div class="col-lg-4 col-md-4">
+                                <div class="single_place">
+                                    <div class="thumb">
+                                        <img src="{{ Storage::url($destination->image) }}" alt="">
+
+                                        <a href="#" class="prise"><i class="fa-solid fa-bangladeshi-taka-sign"></i>{{$destination->Price}} </a>
+                                    </div>
+                                    <div class="place_info">
+                                        <a href="destination_details.html">
+                                            <h3>{{$destination->Name}}</h3>
+                                        </a>
+                                        <p>{{$destination->District}}</p>
+                                        <div class="rating_days d-flex justify-content-between">
+                                            <div class="days">
+                                                <i class="fa fa-clock-o"></i>
+                                                <a href="#">{{$destination->number}}</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
+
                         <div class="col-lg-4 col-md-4">
                             <div class="single_place">
                                 <div class="thumb">
