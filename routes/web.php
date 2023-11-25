@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [pagecontroller::class, 'index'])->name('index');
 Route::get('/about', [pagecontroller::class, 'about'])->name('about');
 Route::get('/contact', [pagecontroller::class, 'contact'])->name('contact');
-Route::get('/destination_details', [pagecontroller::class, 'destination_details'])->name('destination_details');
+Route::get('/destination_details/{id}', [pagecontroller::class, 'destination_details'])->name('destination_details');
 Route::get('/travel_destination', [pagecontroller::class, 'travel_destination'])->name('travel_destination');
 
 

@@ -30,7 +30,7 @@
                                         <a href="#" class="prise"><i class="fa-solid fa-bangladeshi-taka-sign"></i>{{$destination->Price}} </a>
                                     </div>
                                     <div class="place_info">
-                                        <a href="destination_details.html">
+                                        <a href="{{route('destination_details',$destination->id )}}">
                                             <h3>{{$destination->Name}}</h3>
                                         </a>
                                         <p>{{$destination->District}}</p>

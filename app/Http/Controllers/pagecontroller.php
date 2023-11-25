@@ -19,9 +19,10 @@ class pagecontroller extends Controller
     {
         return view('pages.contact');
     }
-    public function destination_details()
+    public function destination_details(string $id)
     {
-        return view('pages.destination_details');
+        $destinations = destination::find($id);
+        return view('pages.destination_details', compact('destinations') );
     }
     public function travel_destination(Request $request)
     {

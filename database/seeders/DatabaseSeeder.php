@@ -18,6 +18,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        \App\Models\categories::factory(30)->create();
+       // \App\Models\categories::factory(30)->create();
+       // \App\Models\destination::factory(50)->create();
+        $this->call([
+            destinationSeeder::class,
+
+        ]);
     }
 }
