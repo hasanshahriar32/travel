@@ -1,11 +1,16 @@
+// vite.config.js
 import { defineConfig } from 'vite';
-import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
-    plugins: [
-        laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
-            refresh: true,
-        }),
-    ],
+  // Specify the entry points for your application
+  build: {
+    outDir: 'public/build', // Output directory for the built files
+    manifest: true, // Generate manifest.json for better asset management
+    rollupOptions: {
+      input: {
+        app: 'resources/js/app.js', // Entry point for your JavaScript
+        styles: 'resources/css/app.css', // Entry point for your CSS
+      },
+    },
+  },
 });

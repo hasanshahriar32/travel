@@ -119,12 +119,14 @@
                                             <a class="dropdown-item"
                                                 href="{{ route('admin.dashboard') }}">Dashboard</a>
                                             <a class="dropdown-item" href="#">Settings</a>
-                                            <a class="dropdown-item" href="3">Login</a>
+                                            @if(!Auth::check())
+                                            <a class="dropdown-item" href="{{ route('login')}}">Login</a>
+                                            @endif
 
-                                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST">
-                                                @csrf <!-- CSRF protection -->
-                                                <button type="submit" class="dropdown-item">Logout</button>
-                                            </form>
+                                            <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="btn btn-link nav-link">Logout</button>
+                        </form>
                                             <!-- Add more dropdown items as needed -->
                                         </div>
                                     </div>

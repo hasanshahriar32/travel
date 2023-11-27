@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', [pagecontroller::class, 'index'])->name('index');
+Route::get('/', [pagecontroller::class, 'index'])->name('index');
 Route::get('/about', [pagecontroller::class, 'about'])->name('about');
 Route::get('/contact', [pagecontroller::class, 'contact'])->name('contact');
 Route::get('/destination_details/{id}', [pagecontroller::class, 'destination_details'])->name('destination_details');
@@ -32,17 +32,18 @@ Route::get('/travel_destination', [pagecontroller::class, 'travel_destination'])
 
 
 //Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin.login');
-//Route::get('/home', [HomeController::class, 'home'])->name('home');
+//Route::get('/home', function() { return "HelloWorld "; } );
 
 route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.guest'], function () {
-        Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login');
-        Route::post('/authinticate', [AdminLoginController::class, 'authenticate'])->name('admin.authenticate');
+        //Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login');
+        //Route::post('/authinticate', [AdminLoginController::class, 'authenticate'])->name('admin.authenticate');
 
     });
-    Route::group(['middleware' => 'admin.auth'], function () {
-        //Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
-        Route::post('/logout', [AdminController::class, 'logout'])->name('admin.logout');
+    // Route::group(['middleware' => 'admin.auth'], function () {
+        Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+
+     //   Route::post('/logout', [AdminController::class, 'logout'])->name('admin.logout');
 
 
         Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
@@ -64,13 +65,16 @@ route::group(['prefix' => 'admin'], function () {
         Route::post('/destination/update/{id}', [DestinationController::class, 'update'])->name('destination.update');
         Route::post('/destination/delete/{id}', [DestinationController::class, 'destroy'])->name('destination.delete');
 
-    });
+    // });
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/login', [App\Http\Controllers\HomeController::class, 'login'])->name('login');
+
+Auth::routes();
