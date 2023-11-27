@@ -29,17 +29,18 @@ class AdminLoginController extends Controller
         //     return redirect()->back()->with('error', 'Invalid Credentials');
         // }
 
-        
+
         $validator = FacadesValidator::make($request->all(), [
             'email' => 'required|email',
-            'password' => 'required|min:6'
+            'password' => 'required|min:5'
         ]);
         if ($validator->passes()) {
 
             if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
                 $admin = Auth::guard('admin')->user();
                 if ($admin->role == 2) {
-                    return redirect()->intended('admin.dashboard');
+                    //dd($admin);
+                    return redirect()->route('admin.dashboard');
                 } else {
                     Auth::guard('admin')->logout();
                     return redirect()->back()->with('error', 'password is wrong');

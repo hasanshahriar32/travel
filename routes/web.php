@@ -36,6 +36,13 @@ route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => 'admin.guest'], function () {
         Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login');
         Route::post('/authinticate', [AdminLoginController::class, 'authenticate'])->name('admin.authenticate');
+
+    });
+    Route::group(['middleware' => 'admin.auth'], function () {
+        //Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+        Route::get('/logout', [HomeController::class, 'logout'])->name('admin.logout');
+
+
         Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
 
         //catagories
@@ -54,14 +61,6 @@ route::group(['prefix' => 'admin'], function () {
         Route::get('/destination/edit/{id}', [DestinationController::class, 'edit'])->name('destination.edit');
         Route::post('/destination/update/{id}', [DestinationController::class, 'update'])->name('destination.update');
         Route::post('/destination/delete/{id}', [DestinationController::class, 'destroy'])->name('destination.delete');
-
-
-
-
-    });
-    Route::group(['middleware' => 'admin.auth'], function () {
-        //Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
-        Route::get('/logout', [HomeController::class, 'logout'])->name('admin.logout');
 
     });
 });

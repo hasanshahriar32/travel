@@ -31,7 +31,7 @@
 
                         </div>
                         @error('email')
-                            <p class="invalid-feedback">{{ $message }}</p>
+                            <p class="text-danger">{{ $message }}</p>
                         @enderror
                         <div class="input-group mb-3">
                             <input type="password" name='password' id='password' class="form-control"
@@ -45,7 +45,7 @@
 
                         </div>
                         @error('password')
-                            <p class="invalid-feedback">{{ $message }}</p>
+                            <p class="text-danger">{{ $message }}</p>
                         @enderror
                         <div class="row">
                             <!-- <div class="col-8">

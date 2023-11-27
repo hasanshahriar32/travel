@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Travelo</title>
+    <title>Travelia</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://kit.fontawesome.com/5b234f7ad3.js" crossorigin="anonymous"></script>
@@ -29,6 +29,8 @@
 
     <link rel="stylesheet" href="{{ asset('page-assets/css/style.css') }}" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+    @yield('page-css')
 </head>
 
 <body>
@@ -50,7 +52,7 @@
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="{{ asset('page-assets/img/logo.png') }}" alt="" />
+                                        <img width="100%" src="{{ asset('page-assets/img/travelo.png') }}" alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -79,7 +81,7 @@
                                     <div class="number">
                                         <p>
                                             <i class="fa fa-phone"></i>
-                                            10(256)-928 256
+                                            +8801521474251
                                         </p>
                                     </div>
                                     <div class="social_links d-none d-xl-block">
@@ -95,7 +97,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#">
+                                                <a href="https://www.facebook.com/kazol.196295/">
                                                     <i class="fa fa-facebook"></i>
                                                 </a>
                                             </li>
@@ -129,14 +131,15 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="{{ asset('page-assets/img/footer_logo.png') }}" alt="" />
+                                    <img width="75%" src="{{ asset('page-assets/img/travelo.png') }}" alt="" />
                                 </a>
                             </div>
                             <p>
-                                5th flora, 700/D kings road, green <br />
-                                lane New York-1782 <br />
-                                <a href="#">+10 367 826 2567</a> <br />
-                                <a href="#">contact@carpenter.com</a>
+                                5th florepgbazar ,Modhubag <br />
+                                Dhaka <br />
+                                <a href="#">+8801521474251</a> <br />
+                                <a href="#">kazol196295@gmail.com</a>
+                                <a href="#">abrar068@gmail.com</a>
                             </p>
                             <div class="socail_links">
                                 <ul>
@@ -164,7 +167,7 @@
                             <h3 class="footer_title">Company</h3>
                             <ul class="links">
                                 <li><a href="#">Pricing</a></li>
-                                <li><a href="#">About</a></li>
+                                <li><a href="{{Route('about')}}">About</a></li>
                                 <li><a href="#"> Gallery</a></li>
                                 <li><a href="#"> Contact</a></li>
                             </ul>
@@ -174,14 +177,14 @@
                         <div class="footer_widget">
                             <h3 class="footer_title">Popular destination</h3>
                             <ul class="links double_links">
-                                <li><a href="#">Indonesia</a></li>
-                                <li><a href="#">America</a></li>
-                                <li><a href="#">India</a></li>
-                                <li><a href="#">Switzerland</a></li>
-                                <li><a href="#">Italy</a></li>
-                                <li><a href="#">Canada</a></li>
-                                <li><a href="#">Franch</a></li>
-                                <li><a href="#">England</a></li>
+                                <li><a href="#">Dhaka</a></li>
+                                <li><a href="#">Sylhet</a></li>
+                                <li><a href="#">Coxs bazar</a></li>
+                                <li><a href="#">Bandorban</a></li>
+                                <li><a href="#">Chattogram</a></li>
+                                <li><a href="#">Khulna</a></li>
+                                <li><a href="#">Barishal</a></li>
+                                <li><a href="#">Rangpur</a></li>
                             </ul>
                         </div>
                     </div>
@@ -236,10 +239,10 @@
                             <script>
                                 document.write(new Date().getFullYear());
                             </script>
-                            All rights reserved | This template is made with
+                            All rights reserved by our team Abrar and kazol |
                             <i class="fa fa-heart-o" aria-hidden="true"></i>
-                            by
-                            <a href="https://colorlib.com" target="_blank">Colorlib</a>
+
+                            {{-- <a href="https://colorlib.com" target="_blank">Colorlib</a> --}}
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
@@ -305,6 +308,7 @@
             },
         });
     </script>
+    @yield('page-js')
 </body>
 
 </html>

@@ -9,7 +9,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('admin.dashboard');
+        $admin = Auth::guard('admin')->user();
+        //echo 'hello '. $admin->name . ' welcome to your dashboard' ;
+        return view('admin.dashboard ', compact('admin'));
     }
     public function logout()
     {
@@ -17,8 +19,5 @@ class HomeController extends Controller
         return redirect()->route('admin.login');
     }
 
-    public function home()
-    {
-        return view('home');
-    }
+    
 }
