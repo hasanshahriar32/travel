@@ -1,76 +1,23 @@
-<!DOCTYPE html>
-<html>
+@extends('layouts.app')
 
-<head>
-    <title>Travel Website</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('home/style.css') }}">
-</head>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
-<body>
-    <div class="navbar">
-        <div class="logo">
-            <h1>Travel</h1>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Places</a></li>
-                <li><a href="#">Discounts</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Booking</a></li>
-            </ul>
-        </div>
-        <div class="signup">
-            <a href="#">Sign Up</a>
-        </div>
-        <div class="signup">
-            <a href="{{ route('admin.login') }}">Login</a>
-        </div>
-    </div>
-    <div class="body">
-        <div class="heading">
-            <h1>Travel With Us</h1>
-            <br>
-            <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. </p>
-            <br>
-            <br>
-            <a href="#">Learn More</a>
-        </div>
-        <div class="tours">
-            <div class="places">
-                <h2>Australia</h2>
-                <img src="{{ asset('home/img1.jpg') }}" style="width: 300px; height: 250px; border-radius: 12px;">
-                <br>
-                <br>
-                <a href="#">Book Now 15% OFF</a>
-            </div>
-            <div class="places">
-                <h2>New York</h2>
-                <img src="{{ asset('home/img2.jpg') }}" style="width: 300px; height: 250px; border-radius: 12px;">
-                <br>
-                <br>
-                <a href="#">Book Now 20% OFF</a>
-            </div>
-            <div class="places">
-                <h2>Thailand</h2>
-                <img src="{{ asset('home/img3.jpg') }}" style="width: 300px; height: 250px; border-radius: 12px;">
-                <br>
-                <br>
-                <a href="#">Book Now 25% OFF</a>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                </div>
             </div>
         </div>
     </div>
-    <div class="footer">
-        <a href="#">Copyright</a>
-        <a href="#">Terms and Conditions</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookies</a>
-        <a href="#">Complaints</a>
-    </div>
-</body>
-
-</html>
+</div>
+@endsection

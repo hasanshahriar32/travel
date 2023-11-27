@@ -52,7 +52,8 @@
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img width="100%" src="{{ asset('page-assets/img/travelo.png') }}" alt="" />
+                                        <img width="100%" src="{{ asset('page-assets/img/travelo.png') }}"
+                                            alt="" />
                                     </a>
                                 </div>
                             </div>
@@ -78,6 +79,8 @@
                             </div>
                             <div class="col-xl-4 col-lg-4 d-none d-lg-block">
                                 <div class="social_wrap d-flex align-items-center justify-content-end">
+
+
                                     <div class="number">
                                         <p>
                                             <i class="fa fa-phone"></i>
@@ -103,21 +106,45 @@
                                             </li>
                                         </ul>
                                     </div>
+
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle d-none d-xl-block" type="button"
+                                            id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <i class="fa-solid fa-user"></i>
+                                        </button>
+                                        <div class="dropdown-menu dropdown-menu-right"
+                                            aria-labelledby="profileDropdown">
+                                            <h5 class="dropdown-item">Hello, kazol</h5>
+                                            <a class="dropdown-item"
+                                                href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                            <a class="dropdown-item" href="#">Settings</a>
+                                            <a class="dropdown-item" href="3">Login</a>
+
+                                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST">
+                                                @csrf <!-- CSRF protection -->
+                                                <button type="submit" class="dropdown-item">Logout</button>
+                                            </form>
+                                            <!-- Add more dropdown items as needed -->
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="seach_icon">
-                                <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+
+                                <div class="seach_icon">
+                                    <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <div class="mobile_menu d-block d-lg-none"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </header>
     <!-- header-end -->
 
@@ -131,7 +158,8 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img width="75%" src="{{ asset('page-assets/img/travelo.png') }}" alt="" />
+                                    <img width="75%" src="{{ asset('page-assets/img/travelo.png') }}"
+                                        alt="" />
                                 </a>
                             </div>
                             <p>
@@ -167,7 +195,7 @@
                             <h3 class="footer_title">Company</h3>
                             <ul class="links">
                                 <li><a href="#">Pricing</a></li>
-                                <li><a href="{{Route('about')}}">About</a></li>
+                                <li><a href="{{ Route('about') }}">About</a></li>
                                 <li><a href="#"> Gallery</a></li>
                                 <li><a href="#"> Contact</a></li>
                             </ul>

@@ -4,39 +4,39 @@
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="slider_active owl-carousel">
-            <div style="background-image: url(./page-assets/img/banner/banner.png)"
+            <div style="background-image: url(./page-assets/img/banner/rangamati.jpg)"
                 class="single_slider d-flex align-items-center overlay">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-12 col-md-12">
                             <div class="slider_text text-center">
-                                <h3>Indonesia</h3>
+                                <h3>Rangamati</h3>
                                 <p>Pixel perfect design with awesome contents</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="background-image: url(./page-assets/img/banner/banner2.png)"
+            <div style="background-image: url(./page-assets/img/banner/dhaka.jpg)"
                 class="single_slider d-flex align-items-center overlay">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-12 col-md-12">
                             <div class="slider_text text-center">
-                                <h3>Australia</h3>
+                                <h3>Dhaka</h3>
                                 <p>Pixel perfect design with awesome contents</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="background-image: url(./page-assets/img/banner/banner3.png)"
+            <div style="background-image: url(./page-assets/img/banner/sylhet.jpg)"
                 class="single_slider d-flex align-items-center overlay">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-12 col-md-12">
                             <div class="slider_text text-center">
-                                <h3>Switzerland</h3>
+                                <h3>sylhet</h3>
                                 <p>Pixel perfect design with awesome contents</p>
                             </div>
                         </div>

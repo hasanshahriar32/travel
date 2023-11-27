@@ -22,6 +22,6 @@ class AdminRedirectIfAuthenticated
             return redirect( )->route('admin.dashboard');
         }
 
-        return $next($request);
+        return redirect( )->route('index');
     }
 }
