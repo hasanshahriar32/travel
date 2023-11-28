@@ -30,6 +30,20 @@
     <link rel="stylesheet" href="{{ asset('page-assets/css/style.css') }}" />
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 
+    {{-- //////////////////laravel css////////////////////////// --}}
+
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('build/assets/app.ac31adfe.css') }}">
+    <script src="{{ asset('build/assets/app.d225c007.js') }}"></script>
+    <!-- Scripts -->
+    {{-- @vite(['resources/sass/app.scss', 'resources/js/app.js']) --}}
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    {{-- //////////////////////////////////////////// --}}
+
+
+
     @yield('page-css')
 </head>
 
@@ -51,7 +65,7 @@
                         <div class="row align-items-center">
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html">
+                                    <a href="{{ route('index') }}">
                                         <img width="100%" src="{{ asset('page-assets/img/travelo.png') }}"
                                             alt="" />
                                     </a>
@@ -113,20 +127,36 @@
                                             aria-expanded="false">
                                             <i class="fa-solid fa-user"></i>
                                         </button>
+                                        @php
+                                            use Illuminate\Support\Facades\Auth;
+                                            $admin = Auth::user();
+                                        @endphp
                                         <div class="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="profileDropdown">
-                                            <h5 class="dropdown-item">Hello, kazol</h5>
-                                            <a class="dropdown-item"
-                                                href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                            @if ($admin)
+                                                <h5 class="dropdown-item">Hello, {{ $admin->name }}</h5>
+                                            @endif
+
+                                            @php
+                                                // Assuming $user->role contains the user's role (e.g., 2 for admin)
+                                                $userRole = $admin->role ?? null;
+                                            @endphp
+
+                                            @if ($userRole === 2)
+                                                <a class="dropdown-item"
+                                                    href="{{ route('admin.dashboard') }}">Dashboard</a>
+                                            @endif
+
                                             <a class="dropdown-item" href="#">Settings</a>
-                                            @if(!Auth::check())
-                                            <a class="dropdown-item" href="{{ route('login')}}">Login</a>
+                                            @if (!Auth::check())
+                                                <a class="dropdown-item" href="{{ route('login') }}">Login</a>
                                             @endif
 
                                             <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="btn btn-link nav-link">Logout</button>
-                        </form>
+                                                @csrf
+                                                <button type="submit"
+                                                    class="dropdown-item btn btn-link nav-link">Logout</button>
+                                            </form>
                                             <!-- Add more dropdown items as needed -->
                                         </div>
                                     </div>

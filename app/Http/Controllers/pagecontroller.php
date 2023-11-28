@@ -9,7 +9,8 @@ class pagecontroller extends Controller
 {
     public function index()
     {
-        return view('pages.index');
+        $destinations = destination::latest()->get();
+        return view('pages.index', compact('destinations'));
     }
     public function about()
     {

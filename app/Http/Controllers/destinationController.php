@@ -89,7 +89,7 @@ $destination = new Destination();
     public function edit(string $id)
     {
         $destination = destination::findorfail($id);
-        return view('admin.destination.edit',compact('destination'));
+        return view('destination.edit',compact('destination'));
     }
 
     /**
@@ -122,7 +122,7 @@ $destination = new Destination();
         $destination->image = $imagePath; // Assign the image path
         $destination->number = $request->input('Number');
         $destination->save(); // Save the data to the database
-        return redirect()->route('destiantion.index')->with('success','Data updated successfully');
+        return redirect()->route('destination.index')->with('success','Data updated successfully');
     }
 
     /**
@@ -132,7 +132,7 @@ $destination = new Destination();
     {
         $destination = destination::findorfail($id);
         $destination->delete();
-        
+
         return redirect()->route('destination.index')
             ->with('success', 'Destination deleted successfully');
     }

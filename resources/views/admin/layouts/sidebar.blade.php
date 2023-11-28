@@ -23,15 +23,15 @@
                 <li class="nav-item">
                     <a href="{{route('catagory.catagories')}}" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>
-                        <p>Category</p>
+                        <p>Places</p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="subcategory.html" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>Sub Category</p>
                     </a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a href="{{route('destination.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>

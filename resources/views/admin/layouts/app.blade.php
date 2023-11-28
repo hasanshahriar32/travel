@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Laravel Shop :: Administrative Panel</title>
+    <title>Travelia: Admin Panel</title>
     <script src="https://kit.fontawesome.com/5b234f7ad3.js" crossorigin="anonymous"></script>
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -46,19 +46,24 @@
                         <img src="{{ asset('admin-assets/img/avatar5.png') }}" class='img-circle elevation-2'
                             width="40" height="40" alt="">
                     </a>
+                    @php
+                        use Illuminate\Support\Facades\Auth;
+                        $admin = Auth::user();
+                    @endphp
+
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-3">
-                        <h4 class="h4 mb-0"><strong>{{$admin->name }}</strong></h4>
-                        <div class="mb-3">{{$admin->email}} </div>
+                        <h4 class="h4 mb-0"><strong>{{ $admin->name }}</strong></h4>
+                        <div class="mb-3">{{ $admin->email }} </div>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
                             <i class="fas fa-user-cog mr-2"></i> Settings
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">
+                        <a href="{{route('password.request')}}" class="dropdown-item">
                             <i class="fas fa-lock mr-2"></i> Change Password
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="{{route('admin.logout')}}" class="dropdown-item text-danger">
+                        <a href="{{ route('logout') }}" class="dropdown-item text-danger">
                             <i class="fas fa-sign-out-alt mr-2"></i> Logout
                         </a>
                     </div>

@@ -22,7 +22,7 @@
                 <div class="col-12">
                     <h2 class="contact-title">Write here</h2>
                 </div>
-                <div class="col-lg-8">
+                {{-- <div class="col-lg-8">
                     <form  action="https://formspree.io/f/meqbbgej" class="form-control" method="POST" id="contactForm"
                         novalidate="novalidate">
                         @csrf
@@ -56,7 +56,46 @@
                             </button>
                         </div>
                     </form>
+                </div> --}}
+                <div class="col-lg-8">
+                    <h1 class="mb-3">Contact Us</h1>
+                    <form method="post" action="https://formspree.io/f/meqbbgej" >
+                        @csrf
+                        <div class="row">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="your-name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="your-name" name="your-name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="your-surname" class="form-label">Your Surname</label>
+                                    <input type="text" class="form-control" id="your-surname" name="your-surname"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="your-email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="your-subject" class="form-label">Your Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject">
+                                </div>
+                                <div class="col-12">
+                                    <label for="your-message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-dark w-100 fw-bold">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+
                 <div class="col-lg-3 offset-lg-1">
                     <div class="media contact-info">
                         <span class="contact-info__icon"><i class="ti-home"></i></span>
@@ -86,6 +125,6 @@
 
     </section>
     <!-- ================ contact section end ================= -->
-
-
 @endsection
+
+

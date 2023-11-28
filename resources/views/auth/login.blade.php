@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('pages.layout.app')
 
-@section('content')
+@section('page-content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-6">
+            <div class="card mb-4">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
@@ -64,6 +64,7 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="row mb-0 col-md-8 offset-md-4" style="color: red"><a href="{{route('register')}}">Create a new account ?</a></div>
                     </form>
                 </div>
             </div>

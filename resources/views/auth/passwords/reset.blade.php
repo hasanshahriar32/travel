@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('pages.layout.app')
 
-@section('content')
+@section('page-content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+        <div class="col-md-8 ">
+            <div class="card mb-8">
                 <div class="card-header">{{ __('Reset Password') }}</div>
 
                 <div class="card-body">

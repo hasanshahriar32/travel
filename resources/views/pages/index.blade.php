@@ -4,19 +4,22 @@
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="slider_active owl-carousel">
-            <div style="background-image: url(./page-assets/img/banner/rangamati.jpg)"
-                class="single_slider d-flex align-items-center overlay">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-xl-12 col-md-12">
-                            <div class="slider_text text-center">
-                                <h3>Rangamati</h3>
-                                <p>Pixel perfect design with awesome contents</p>
+            {{-- @foreach ($destinations as $destination)
+                <div style="background-image: url('{{Storage::url($destination->image)}}')"
+                    class="single_slider d-flex align-items-center overlay">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-12 col-md-12">
+                                <div class="slider_text text-center">
+                                    <h3>{{$destination->name}}</h3>
+                                    <p>Pixel perfect design with awesome contents</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endforeach --}}
+
             <div style="background-image: url(./page-assets/img/banner/dhaka.jpg)"
                 class="single_slider d-flex align-items-center overlay">
                 <div class="container">
@@ -65,7 +68,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_place">
                         <div class="thumb">
-                            <img src="{{asset('page-assets/img/place/1.png')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/place/1.png') }}" alt="" />
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
@@ -85,7 +88,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_place">
                         <div class="thumb">
-                            <img src="{{asset('page-assets/img/place/2.png')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/place/2.png') }}" alt="" />
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
@@ -105,7 +108,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_place">
                         <div class="thumb">
-                            <img src="{{asset('page-assets/img/place/3.png')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/place/3.png') }}" alt="" />
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
@@ -125,7 +128,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_place">
                         <div class="thumb">
-                            <img src="{{asset('page-assets/img/place/4.png')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/place/4.png') }}" alt="" />
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
@@ -145,7 +148,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_place">
                         <div class="thumb">
-                            <img src="{{asset('page-assets/img/place/5.png')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/place/5.png') }}" alt="" />
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
@@ -165,7 +168,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_place">
                         <div class="thumb">
-                            <img src="{{asset('page-assets/img/place/6.png')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/place/6.png') }}" alt="" />
                             <a href="#" class="prise">$500</a>
                         </div>
                         <div class="place_info">
@@ -193,7 +196,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_travel text-center">
                         <div class="icon">
-                            <img src="{{asset('page-assets/img/svg_icon/1.svg')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/svg_icon/1.svg') }}" alt="" />
                         </div>
                         <h3>Comfortable Journey</h3>
                         <p>
@@ -205,7 +208,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_travel text-center">
                         <div class="icon">
-                            <img src="{{asset('page-assets/img/svg_icon/2.svg')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/svg_icon/2.svg') }}" alt="" />
                         </div>
                         <h3>Luxuries Hotel</h3>
                         <p>
@@ -217,7 +220,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single_travel text-center">
                         <div class="icon">
-                            <img src="{{asset('page-assets/img/svg_icon/3.svg')}}" alt="" />
+                            <img src="{{ asset('page-assets/img/svg_icon/3.svg') }}" alt="" />
                         </div>
                         <h3>Travel Guide</h3>
                         <p>
@@ -241,7 +244,8 @@
                                 <div class="col-lg-8">
                                     <div class="single_testmonial text-center">
                                         <div class="author_thumb">
-                                            <img src="{{asset('page-assets/img/testmonial/author.png')}}" alt="" />
+                                            <img src="{{ asset('page-assets/img/testmonial/author.png') }}"
+                                                alt="" />
                                         </div>
                                         <p>
                                             "Working in conjunction with humanitarian aid agencies,
@@ -260,7 +264,8 @@
                                 <div class="col-lg-8">
                                     <div class="single_testmonial text-center">
                                         <div class="author_thumb">
-                                            <img src="{{asset('page-assets/img/testmonial/author.png')}}" alt="" />
+                                            <img src="{{ asset('page-assets/img/testmonial/author.png') }}"
+                                                alt="" />
                                         </div>
                                         <p>
                                             "Working in conjunction with humanitarian aid agencies,
@@ -279,7 +284,8 @@
                                 <div class="col-lg-8">
                                     <div class="single_testmonial text-center">
                                         <div class="author_thumb">
-                                            <img src="{{asset('page-assets/img/testmonial/author.png')}}" alt="" />
+                                            <img src="{{ asset('page-assets/img/testmonial/author.png') }}"
+                                                alt="" />
                                         </div>
                                         <p>
                                             "Working in conjunction with humanitarian aid agencies,
@@ -299,5 +305,4 @@
         </div>
     </div>
     <!-- /testimonial_area  -->
-
 @endsection

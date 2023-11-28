@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('pages.layout.app')
 
-@section('content')
+@section('page-content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mb-4">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
