@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\destinationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\pagecontroller;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +27,10 @@ Route::get('/about', [pagecontroller::class, 'about'])->name('about');
 Route::get('/contact', [pagecontroller::class, 'contact'])->name('contact');
 Route::get('/destination_details/{id}', [pagecontroller::class, 'destination_details'])->name('destination_details');
 Route::get('/travel_destination', [pagecontroller::class, 'travel_destination'])->name('travel_destination');
+Route::get('/booking/{id}', [pagecontroller::class, 'booking'])->name('booking');
+Route::post('/booking', [OrderController::class,'store'])->name('booking.store');
 //Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login');
+
 
 
 

@@ -31,4 +31,10 @@ class pagecontroller extends Controller
         //dd($destinations[0]);
         return view('pages.travel_destination', compact('destinations'));
     }
+    public function booking(string $id)
+    {
+        $destination = destination::findorfail($id);
+        return view('pages.booking', compact('destination'));
+    }
+
 }
