@@ -89,7 +89,7 @@ $destination = new Destination();
     public function edit(string $id)
     {
         $destination = destination::findorfail($id);
-        return view('destination.edit',compact('destination'));
+        return view('admin.destination.edit',compact('destination'));
     }
 
     /**

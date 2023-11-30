@@ -130,6 +130,7 @@
                                         @php
                                             use Illuminate\Support\Facades\Auth;
                                             $admin = Auth::user();
+                                            // dd($admin->name);
                                         @endphp
                                         <div class="dropdown-menu dropdown-menu-right"
                                             aria-labelledby="profileDropdown">
@@ -160,13 +161,20 @@
                                             <!-- Add more dropdown items as needed -->
                                         </div>
                                     </div>
+                                    <div class="search_icon ">
+                                        <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                                            <i class="fa fa-search"></i>
+                                        </a>
+                                    </div>
+
                                 </div>
 
-                                <div class="seach_icon">
+                                {{-- <div class="search_icon ">
                                     <a data-toggle="modal" data-target="#exampleModalCenter" href="#">
                                         <i class="fa fa-search"></i>
                                     </a>
-                                </div>
+                                </div> --}}
+
 
 
                                 <div class="col-12">

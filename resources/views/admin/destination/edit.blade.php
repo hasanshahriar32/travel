@@ -39,7 +39,7 @@
                                 <div class="mb-3">
                                     <label for="Name">Name</label>
                                     <input type="text" name="Name" id="Name" class="form-control"
-                                        placeholder="Name" value="{{ $destination->Name }}">
+                                        placeholder="Name" value="{{old($destination->Name) }}">
 
                                 </div>
                             </div>
@@ -47,27 +47,27 @@
                                 <div class="mb-3">
                                     <label for="District">District</label>
                                     <input type="text" name="District" id="District" class="form-control"
-                                        placeholder="District" value="{{ $destination->District }}">
+                                        placeholder="District" value="{{ old($destination->District) }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="slug">Duration</label>
                                     <input type="text" name="Duration" id="Duration" class="form-control"
-                                        placeholder="Duration" value="{{ $destination->Duration }}">
+                                        placeholder="Duration" value="{{ old($destination->Duration) }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="Price">Price</label>
                                     <input type="text" name="Price" id="Price" class="form-control"
-                                        placeholder="Price" value="{{ $destination->Price }}">
+                                        placeholder="Price" value="{{ old($destination->Price) }}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
                                     <label for="Description">Description</label>
-                                    <textarea id="Description" name="Description" class="form-control" placeholder="Description" rows="5">{{ $destination->Description }}</textarea>
+                                    <textarea id="Description" name="Description" class="form-control" placeholder="Description" rows="5">{{ old($destination->Description) }}</textarea>
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@
                                 <div class="mb-3">
                                     <label for="Number">Number</label>
                                     <input type="text" name="Number" id="Number" class="form-control"
-                                        placeholder="Number" value="{{ $destination->number }}">
+                                        placeholder="Number" value="{{old($destination->number) }}">
                                 </div>
                             </div>
 

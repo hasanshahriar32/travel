@@ -50,7 +50,9 @@
                     </div>
                     <div class="bordered_1px"></div>
                     <div class="contact_join">
-                        <h3 class="text-center">Booking</h3>
+                        <a href="{{route('booking',$destinations->id)}}" class="btn alert-danger text-center">Book Now</a>
+                        <h3 class="text-center" > Want to contact ?</h3>
+                        {{-- <Button>Book now </Button> --}}
                         <form action="#">
                             <div class="row">
                                 <div class="col-lg-12">

@@ -24,7 +24,7 @@
 
                             <div class="col-lg-4 col-md-4">
                                 <div class="single_place">
-                                    <div class="thumb">
+                                    <div class="thumb" style="height: 200px">
                                         <img src="{{ Storage::url($destination->image) }}" alt="">
 
                                         <a href="#" class="prise"><i class="fa-solid fa-bangladeshi-taka-sign"></i>{{$destination->Price}} </a>
@@ -45,7 +45,7 @@
                             </div>
                         @endforeach
 
-                        <div class="col-lg-4 col-md-4">
+                        {{-- <div class="col-lg-4 col-md-4">
                             <div class="single_place">
                                 <div class="thumb">
                                     <img src="{{asset('page-assets/img/place/2.png')}}" alt="">
@@ -134,7 +134,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

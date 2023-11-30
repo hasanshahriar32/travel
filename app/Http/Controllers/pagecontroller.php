@@ -33,7 +33,7 @@ class pagecontroller extends Controller
     }
     public function booking(string $id)
     {
-        $destination = destination::findorfail($id);
+        $destination = destination::find($id);
         return view('pages.booking', compact('destination'));
     }
 

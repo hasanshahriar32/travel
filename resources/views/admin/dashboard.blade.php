@@ -50,8 +50,8 @@
                         <div class="col-lg-4 col-6">
                             <div class="small-box card">
                                 <div class="inner">
-                                    <h3>$1000</h3>
-                                    <p>Total Sale</p>
+                                    <h3>64</h3>
+                                    <p>Districts</p>
                                 </div>
                                 <div class="icon">
                                     <i class="ion ion-person-add"></i>

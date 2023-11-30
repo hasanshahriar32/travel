@@ -31,13 +31,24 @@ class OrderController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'destination' => 'required|string|max:255',
-            'duration' => 'required|numeric|max:255',
+            'destination_id' => 'required|string|max:255',
+            'duration' => 'required|string|max:255',
             'phone' => 'required|string|max:20',
             'payment_method' => 'required|string|max:255',
             'payment' => 'required|numeric',
         ]);
-        Order::create($request->all());
+        $order = new Order();
+        $order->name = $request->name;
+        // $order->email = $request->email;
+        $order->phone = $request->phone;
+        $order->duration = $request->duration;
+        $order->payment_method = $request->payment_method;
+        $order->destination = $request->destination_id;
+        $order->payment = $request->payment;
+        $order->save();
+        //dd($order);
+
+
         return redirect()->back()->with('success', 'Order created successfully');
     }
 
