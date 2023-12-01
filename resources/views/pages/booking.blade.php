@@ -27,11 +27,7 @@
                                 $user = Auth::user();
                                 // dd($user->name);
                             @endphp
-                        @else
-                            @php
-                                //dd('not logged in');
-                                return redirect()->route('login');
-                            @endphp
+
                         @endif
 
 
@@ -101,7 +97,7 @@
 
                             </div>
                             <div class="form-btn">
-                                <button class="submit">Book Now</button>
+                                <button class="submit submit-btn">Book Now</button>
                             </div>
                         </form>
                     </div>

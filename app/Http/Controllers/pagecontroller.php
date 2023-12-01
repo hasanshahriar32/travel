@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\destination;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class pagecontroller extends Controller
 {
@@ -33,6 +35,9 @@ class pagecontroller extends Controller
     }
     public function booking(string $id)
     {
+        if (!Auth::check()) {
+            return Redirect::route('login')->with('error', 'You must log in to access the booking page.');
+        }
         $destination = destination::find($id);
         return view('pages.booking', compact('destination'));
     }

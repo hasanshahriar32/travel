@@ -17,4 +17,9 @@ class destination extends Model
         'image',
         'number',
     ];
+    public function images()
+    {
+        return $this->hasMany(DestinationImage::class);
+    }
+
 }

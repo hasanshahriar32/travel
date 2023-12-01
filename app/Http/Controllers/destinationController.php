@@ -32,7 +32,7 @@ class destinationController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-        public function store(Request $request)
+    public function store(Request $request)
     {
         //dd($request->all());
         $validatedData = $request->validate([
@@ -45,30 +45,30 @@ class destinationController extends Controller
             // Ensure the file is an image
             'Number' => 'required',
         ]);
-$destination = new Destination();
+        $destination = new Destination();
         // Store the uploaded image in the specified directory
         $image = $request->file('Image');
 
-        $imageName = time().'_'.$image->getClientOriginalName();
+        $imageName = time() . '_' . $image->getClientOriginalName();
 
         $imagePath = $image->storeAs('public/destination', $imageName);
 
 
-            // Create a new destination instance with the form data
+        // Create a new destination instance with the form data
 
-            $destination->Name = $request->input('Name');
+        $destination->Name = $request->input('Name');
 
-            $destination->District = $request->input('District');
+        $destination->District = $request->input('District');
 
-            $destination->Duration = $request->input('Duration');
+        $destination->Duration = $request->input('Duration');
         $destination->Price = $request->input('Price');
-        $destination->Description = $request->input('Description');
+        $destination->Description = nl2br($request->input('Description') );
         $destination->image = $imagePath; // Assign the image path
         $destination->number = $request->input('Number');
 
-            $destination->save(); // Save the data to the database
+        $destination->save(); // Save the data to the database
         //dd($destination);
-            return redirect()->route('destination.index')->with('success', 'Destination stored successfully');
+        return redirect()->route('destination.index')->with('success', 'Destination stored successfully');
     }
 
 
@@ -89,7 +89,7 @@ $destination = new Destination();
     public function edit(string $id)
     {
         $destination = destination::findorfail($id);
-        return view('admin.destination.edit',compact('destination'));
+        return view('admin.destination.edit', compact('destination'));
     }
 
     /**
@@ -122,7 +122,7 @@ $destination = new Destination();
         $destination->image = $imagePath; // Assign the image path
         $destination->number = $request->input('Number');
         $destination->save(); // Save the data to the database
-        return redirect()->route('destination.index')->with('success','Data updated successfully');
+        return redirect()->route('destination.index')->with('success', 'Data updated successfully');
     }
 
     /**
@@ -136,4 +136,6 @@ $destination = new Destination();
         return redirect()->route('destination.index')
             ->with('success', 'Destination deleted successfully');
     }
+
+
 }

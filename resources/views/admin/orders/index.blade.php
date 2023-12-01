@@ -8,7 +8,7 @@
                     <h1>Orders</h1>
                 </div>
                 <div class="col-sm-6 text-right">
-                    <a href="{{ route('destination.create') }}" class="btn btn-primary">New Destination</a>
+                    <a href="#" class="btn btn-primary">New Orders</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                 <form action="" method="GET">
                     <div class="card-header">
                         <div class="card-title">
-                            <button type="button" onclick="window.location.href='{{ route('destination.index') }}' "
+                            <button type="button" onclick="window.location.href='{{ route('orders.index') }}' "
                                 class="btn btn-default">Reset</button>
                         </div>
                         <div class="card-tools">
@@ -51,23 +51,23 @@
                                 <th>Phone</th>
                                 <th>Payment</th>
                                 <th>Payment method</th>
-                                <th>Payment</th>
+
 
                                 {{-- <th width="100">Status</th> --}}
 
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($destinations as $category)
+                            @foreach ($orders as $category)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $category->name }}</td>
-                                    <td>{{ $category->Destination }}</td>
+                                    <td>{{ $category->destination }}</td>
 
-                                    <td>{{ $category->Duration }}</td>
-                                    <td>{{ $category->Phone }}</td>
-                                    <td>{{ $category->Payment }}</td>
-                                    <td>{{ $category->Payment_method }}</td>
+                                    <td>{{ $category->duration }}</td>
+                                    <td>{{ $category->phone }}</td>
+                                    <td>{{ $category->payment }}</td>
+                                    <td>{{ $category->payment_method }}</td>
 
 
                                     {{-- <td>
@@ -118,7 +118,7 @@
                 </div>
                 <div class="card-footer clearfix">
                     <ul class="pagination pagination m-0 float-right">
-                        {{ $destinations->links() }}
+                        {{ $orders->links() }}
                         {{-- <li class="page-item"><a class="page-link" href="#">«</a></li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                             <li class="page-item"><a class="page-link" href="#">2</a></li>

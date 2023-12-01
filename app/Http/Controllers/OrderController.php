@@ -10,9 +10,13 @@ class OrderController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $orders = Order::all();
+        $orders = Order::latest();
+        if (!empty($request->get('keyword'))) {
+            $orders = $orders->where('name', 'like', '%' . $request->get('keyword') . '%');
+        }
+        $orders = $orders->paginate(10);
         return view('admin.orders.index', compact('orders'));
     }
 

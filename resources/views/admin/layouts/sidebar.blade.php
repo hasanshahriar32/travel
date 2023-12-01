@@ -59,7 +59,7 @@
                             </a>
                         </li> --}}
                 <li class="nav-item">
-                    <a href="orders.html" class="nav-link">
+                    <a href="{{route('orders.index')}}" class="nav-link">
                         <i class="nav-icon fas fa-shopping-bag"></i>
                         <p>Orders</p>
                     </a>
@@ -74,6 +74,12 @@
                     <a href="users.html" class="nav-link">
                         <i class="nav-icon  fas fa-users"></i>
                         <p>Users</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('destination.uploadImages')}}" class="nav-link">
+                        <i class="nav-icon  fas fa-users"></i>
+                        <p>Destination images upload</p>
                     </a>
                 </li>
                 {{-- <li class="nav-item">

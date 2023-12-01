@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\AdminLoginController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\destinationController;
+use App\Http\Controllers\DestinationImageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\pagecontroller;
@@ -48,7 +49,7 @@ route::group(['prefix' => 'admin'], function () {
         // Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
 
      //   Route::post('/logout', [AdminController::class, 'logout'])->name('admin.logout');
-
+        //dashboard
 
         Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
@@ -68,6 +69,13 @@ route::group(['prefix' => 'admin'], function () {
         Route::get('/destination/edit/{id}', [DestinationController::class, 'edit'])->name('destination.edit');
         Route::post('/destination/update/{id}', [DestinationController::class, 'update'])->name('destination.update');
         Route::post('/destination/delete/{id}', [DestinationController::class, 'destroy'])->name('destination.delete');
+
+        //destination images
+        Route::get('/destination/uploadImages', [DestinationImageController::class, 'create'])->name('destination.uploadImages');
+        Route::post('/destination/uploadImages', [DestinationImageController::class, 'store'])->name('destination.uploadImages.store');
+
+        //orders
+        Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 
     // });
 });
