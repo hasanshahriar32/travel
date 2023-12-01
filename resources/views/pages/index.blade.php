@@ -4,23 +4,23 @@
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="slider_active owl-carousel">
-            {{-- @foreach ($destinations as $destination)
+            @foreach ($destinations as $destination)
                 <div style="background-image: url('{{Storage::url($destination->image)}}')"
                     class="single_slider d-flex align-items-center overlay">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-xl-12 col-md-12">
                                 <div class="slider_text text-center">
-                                    <h3>{{$destination->name}}</h3>
+                                    <h3>{{$destination->Name}}</h3>
                                     <p>Pixel perfect design with awesome contents</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            @endforeach --}}
+            @endforeach
 
-            <div style="background-image: url(./page-assets/img/banner/dhaka.jpg)"
+            {{-- <div style="background-image: url(./page-assets/img/banner/dhaka.jpg)"
                 class="single_slider d-flex align-items-center overlay">
                 <div class="container">
                     <div class="row align-items-center">
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <!-- slider_area_end -->

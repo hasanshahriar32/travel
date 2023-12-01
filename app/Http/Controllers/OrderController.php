@@ -16,7 +16,7 @@ class OrderController extends Controller
         if (!empty($request->get('keyword'))) {
             $orders = $orders->where('name', 'like', '%' . $request->get('keyword') . '%');
         }
-        $orders = $orders->paginate(10);
+        $orders = $orders->paginate(6);
         return view('admin.orders.index', compact('orders'));
     }
 
@@ -33,14 +33,17 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+         $request->validate([
             'name' => 'required|string|max:255',
             'destination_id' => 'required|string|max:255',
             'duration' => 'required|string|max:255',
-            'phone' => 'required|string|max:20',
-            'payment_method' => 'required|string|max:255',
+            'phone' => 'required|string|max:20|regex:/^([0-9\s\-\+\(\)]*)$/|min:11',
+            'payment_method' => 'required|string|max:25',
             'payment' => 'required|numeric',
+            'transaction'=> 'string|max:255',
+            'checkin'=> 'date',
         ]);
+
         $order = new Order();
         $order->name = $request->name;
         // $order->email = $request->email;
@@ -49,6 +52,8 @@ class OrderController extends Controller
         $order->payment_method = $request->payment_method;
         $order->destination = $request->destination_id;
         $order->payment = $request->payment;
+        $order->transaction = $request->transaction;
+        $order->checkin = $request->checkin;
         $order->save();
         //dd($order);
 

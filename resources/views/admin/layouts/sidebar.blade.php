@@ -94,6 +94,12 @@
                         <p>Places</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('index')}}" class="nav-link">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Main website</p>
+                    </a>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

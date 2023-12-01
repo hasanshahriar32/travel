@@ -86,13 +86,28 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-sm-5">
+                                <div class="col-sm-6">
                                     <div class="form-group">
                                         <span class="form-label">Payment</span>
                                         <input name="payment" class="form-control" type="number"
                                             placeholder="Enter payment">
                                     </div>
                                 </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Transaction Number </span>
+                                        <input name="transaction" class="form-control" type="text"
+                                            placeholder="Enter transaction">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <span class="form-label">Check in </span>
+                                        <input name="checkin" class="form-control" type="date"
+                                            placeholder="Enter check in date">
+                                    </div>
+                                </div>
+
 
 
                             </div>

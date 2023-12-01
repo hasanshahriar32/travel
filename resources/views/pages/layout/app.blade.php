@@ -324,10 +324,12 @@
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="serch_form">
-                    <input type="text" placeholder="Search" />
-                    <button type="submit">search</button>
-                </div>
+                <form action="{{route('travel_destination')}}">
+                    <div class="serch_form">
+                        <input type="search" name="search" placeholder="Search"  />
+                        <button type="submit">search</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

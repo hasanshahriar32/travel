@@ -49,6 +49,7 @@
                                 <th>Destination</th>
                                 <th>Duration</th>
                                 <th>Phone</th>
+                                <th>Transaction</th>
                                 <th>Payment</th>
                                 <th>Payment method</th>
 
@@ -66,6 +67,7 @@
 
                                     <td>{{ $category->duration }}</td>
                                     <td>{{ $category->phone }}</td>
+                                    <td>{{ $category->transaction }}</td>
                                     <td>{{ $category->payment }}</td>
                                     <td>{{ $category->payment_method }}</td>
 
