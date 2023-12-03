@@ -77,6 +77,9 @@ route::group(['prefix' => 'admin'], function () {
         //orders
         Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 
+        //users
+        Route::get('/user', [OrderController::class,'user'])->name('user.index');
+
     // });
 });
 

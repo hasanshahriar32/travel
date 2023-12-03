@@ -16,18 +16,18 @@ class AdminController extends Controller
         $user = User::count();
         $order = Order::count();
         //dd($order);
-        
+
         //echo 'hello '. $admin->name . ' welcome to your dashboard' ;
         return view('admin.dashboard ', compact('admin','order','user'));
     }
-    public function logout()
-    {
-        if (Auth::guard('admin')->check()) {
-            Auth::guard('admin')->logout();
-        } else {
-            Auth::logout();
-        }
+    // public function logout()
+    // {
+    //     if (Auth::guard('admin')->check()) {
+    //         Auth::guard('admin')->logout();
+    //     } else {
+    //         Auth::logout();
+    //     }
 
-        return redirect()->route('index');
-    }
+    //     return redirect()->route('index');
+    // }
 }

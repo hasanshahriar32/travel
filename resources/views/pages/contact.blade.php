@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>contact Us</h3>
+                        {{-- <h3>contact Us</h3> --}}
                         <p>We are here for <span style="color: red ;">YOU</span></p>
                     </div>
                 </div>
@@ -19,9 +19,9 @@
     <section class="contact-section">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                {{-- <div class="col-12">
                     <h2 class="contact-title">Write here</h2>
-                </div>
+                </div> --}}
                 {{-- <div class="col-lg-8">
                     <form  action="https://formspree.io/f/meqbbgej" class="form-control" method="POST" id="contactForm"
                         novalidate="novalidate">

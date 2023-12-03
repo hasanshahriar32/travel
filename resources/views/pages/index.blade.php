@@ -5,13 +5,13 @@
     <div class="slider_area">
         <div class="slider_active owl-carousel">
             @foreach ($destinations as $destination)
-                <div style="background-image: url('{{Storage::url($destination->image)}}')"
+                <div style="background-image: url('{{ Storage::url($destination->image) }}')"
                     class="single_slider d-flex align-items-center overlay">
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-xl-12 col-md-12">
                                 <div class="slider_text text-center">
-                                    <h3>{{$destination->Name}}</h3>
+                                    <h3>{{ $destination->Name }}</h3>
                                     <p>Pixel perfect design with awesome contents</p>
                                 </div>
                             </div>
@@ -58,14 +58,37 @@
                     <div class="section_title text-center mb_70">
                         <h3>Popular Destination</h3>
                         <p>
-                            Suffered alteration in some form, by injected humour or good day
-                            randomised booth anim 8-bit hella wolf moon beard words.
+                            You can find the most popular destination here. You can
+                            choose your destination and make a plan for your next
+                            vacation.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
+                @foreach ($destinations as $destination)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single_place">
+                            <div class="thumb" style="height: 200px;">
+                                <img src="{{ Storage::url($destination->image) }}" alt="" />
+                                <a href="#" class="prise">${{$destination->Price}}</a>
+                            </div>
+                            <div class="place_info">
+                                <a href="{{route('destination_details',$destination->id )}}">
+                                    <h3>{{$destination->Name}} </h3>
+                                </a>
+                                <p>{{$destination->District}}</p>
+                                <div class="rating_days d-flex justify-content-between">
+                                    <div class="days">
+                                        <i class="fa fa-clock-o"></i>
+                                        <a href="#">{{$destination->number}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                {{-- <div class="col-lg-4 col-md-6">
                     <div class="single_place">
                         <div class="thumb">
                             <img src="{{ asset('page-assets/img/place/1.png') }}" alt="" />
@@ -184,7 +207,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

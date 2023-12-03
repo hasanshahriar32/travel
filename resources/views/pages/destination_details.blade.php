@@ -66,14 +66,14 @@
                         <p>
                             {{ $destinations->Description }}
                         </p>
-                        <p>
+                        {{-- <p>
                             Variations of passages of lorem Ipsum available, but the
                             majority have suffered alteration in some form, by injected
                             humour, or randomised words which don't look even slightly
                             believable. If you are going to use a passage of Lorem Ipsum,
                             you need to be sure there isn't anything embarrassing.
-                            {{-- </p>
-                        <div class="single_destination">
+                        </p> --}}
+                        {{-- <div class="single_destination">
                             <h4>Day-01</h4>
                             <p>
                                 There are many variations of passages of Lorem Ipsum

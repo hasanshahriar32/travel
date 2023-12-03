@@ -15,7 +15,7 @@
                 <!-- Add icons to the links using the .nav-icon class
         with font-awesome or any other icon font library -->
                 <li class="nav-item">
-                    <a href="{{route('admin.dashboard')}}" class="nav-link">
+                    <a href="{{ route('admin.dashboard') }}" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                     </a>
@@ -28,7 +28,7 @@
                     </a>
                 </li> --}}
                 <li class="nav-item">
-                    <a href="{{route('destination.index')}}" class="nav-link">
+                    <a href="{{ route('destination.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>Destination</p>
                     </a>
@@ -59,7 +59,7 @@
                             </a>
                         </li> --}}
                 <li class="nav-item">
-                    <a href="{{route('orders.index')}}" class="nav-link">
+                    <a href="{{ route('orders.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-shopping-bag"></i>
                         <p>Orders</p>
                     </a>
@@ -71,14 +71,14 @@
                     </a>
                 </li> --}}
                 <li class="nav-item">
-                    <a href="users.html" class="nav-link">
+                    <a href="{{ route('user.index') }}" class="nav-link">
                         <i class="nav-icon  fas fa-users"></i>
                         <p>Users</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('destination.uploadImages')}}" class="nav-link">
-                        <i class="nav-icon  fas fa-users"></i>
+                    <a href="{{ route('destination.uploadImages') }}" class="nav-link">
+                        <i class="fa-solid fa-image"></i>
                         <p>Destination images upload</p>
                     </a>
                 </li>
@@ -89,17 +89,32 @@
                     </a>
                 </li> --}}
                 <li class="nav-item">
-                    <a href="{{route('catagory.catagories')}}" class="nav-link">
+                    <a href="{{ route('catagory.catagories') }}" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>Places</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('index')}}" class="nav-link">
+                {{-- <li class="nav-item">
+                    <a href="{{ route('index') }}" class="nav-link">
                         <i class="nav-icon fas fa-file-alt"></i>
                         <p>Main website</p>
                     </a>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="nav-icon fas fa-file-alt"></i>
+                        <p>Main Website</p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{{ route('index') }}">Home</a>
+                        <a class="dropdown-item" href="{{ route('about') }}">about</a>
+                        <a class="dropdown-item" href="{{ route('contact') }}">contact</a>
+                        <a class="dropdown-item" href="{{ route('travel_destination') }}">destination</a>
+                        {{-- <a class="dropdown-item" href="{{ route('destinationDetails') }}">destinationDetails</a> --}}
+                    </div>
                 </li>
+
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

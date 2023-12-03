@@ -17,7 +17,7 @@ class destinationController extends Controller
         if (!empty($request->get('keyword'))) {
             $destinations = $destinations->where('Name', 'like', '%' . $request->get('keyword') . '%');
         }
-        $destinations = $destinations->paginate(10);
+        $destinations = $destinations->paginate(6);
         return view('admin.destination.index', compact('destinations'));
     }
 

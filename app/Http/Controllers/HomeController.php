@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\destination;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('pages.index');
+        $destinations = destination::all();
+        return view('pages.index', compact('destinations'));
     }
     public function login()
     {
